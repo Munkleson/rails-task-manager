@@ -4,3 +4,7 @@
   <%= check_box_tag :completed, "t", @task[:completed] %>
   <p>This task is <%= @task[:completed] ? "completed" : "not completed yet" %></p>
 </div>
+
+<a href="/tasks">Back to home</a>
+<%= link_to "Edit", edit_path(@task) %>
+<%= link_to "Delete", task_path(@task), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
