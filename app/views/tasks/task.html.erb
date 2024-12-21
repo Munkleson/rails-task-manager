@@ -1,0 +1,6 @@
+<h1><%= @task[:title] %></h1>
+<p><%= @task[:details] %></p>
+<div class="completion-div">
+  <%= check_box_tag :completed, "t", @task[:completed] %>
+  <p>This task is <%= @task[:completed] ? "completed" : "not completed yet" %></p>
+</div>
